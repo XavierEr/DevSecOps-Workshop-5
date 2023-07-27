@@ -73,7 +73,7 @@ resource "digitalocean_droplet" "nginx" {
   region = var.do_region
   size = var.do_size
 
-  ssh_keys = [ data.digitalocean_ssh_key.www-1 ]
+  ssh_keys = [ data.digitalocean_ssh_key.www-1.id ]
 
   connection {
     type = "ssh"
