@@ -92,7 +92,7 @@ resource "digitalocean_droplet" "nginx" {
 
   provisioner "file" {
     source = local_file.nginx-conf.filename
-    destination = "etc/nginx/nginx.conf"
+    destination = "/etc/nginx/nginx.conf"
   }
 
   provisioner "remote-exec" {
