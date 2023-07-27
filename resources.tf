@@ -11,7 +11,7 @@ resource "docker_network" "bgg_net" {
   name = "${var.app_namespace}-bgg-net"
 }
 
-resource "docker_volumn" "data-vol" {
+resource "docker_volume" "data-vol" {
   name = "${var.app_namespace}-data-vol"
 }
 
@@ -25,7 +25,7 @@ resource "docker_container" "bgg-database" {
   }
 
   volumes {
-    volume_name = docker_volumn.data-vol.name
+    volume_name = docker_volume.data-vol.name
     container_path = "/var/lib/mysql"
   }
 
