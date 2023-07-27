@@ -85,7 +85,7 @@ resource "digitalocean_droplet" "nginx" {
   provisioner "remote-exec" {
     inline = [
       "apt update -y",
-      "apt upgrade -y",
+      # "apt upgrade -y",
       "apt install nginx -y"
     ]
   }
