@@ -21,7 +21,7 @@ resource "docker_container" "bgg-database" {
   image = docker_image.bgg_database.image_id
 
   networks_advanced {
-    name = docker_network.bgg-net.id
+    name = docker_network.bgg_net.id
   }
 
   volumes {
@@ -41,7 +41,7 @@ resource "docker_container" "bgg-backend" {
   image = docker_image.bgg_backend.image_id
 
   networks_advanced {
-    name = docker_network.bgg-net.id
+    name = docker_network.bgg_net.id
   }
 
   env = [
