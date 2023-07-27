@@ -15,7 +15,7 @@ http: {
     upstream apps {
         least_conn;
         
-        %{~for p in ports ~}
+        %{~ for p in ports ~}
         server ${docker_host}:${p};
         %{~ endfor ~}
     }
